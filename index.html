@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Catch</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="h-screen bg-slate-800 flex items-center justify-center flex-col text-white gap-10 relative"
+  >
+    <header class="text-2xl font-bold mb-8">Apple Catch</header>
+    <main class="relative">
+      <canvas id="gameCanvas" class="border-2 border-red-300 z-10"></canvas>
+      <div
+        id="gameStartDiv"
+        class="gameUI z-20 absolute flex flex-col items-center justify-center top-0 left-0 right-0 bottom-0 bg-slate-700 bg-opacity-75"
+      >
+        <p class="text-lg mb-4">You have 30 seconds to catch the apples!</p>
+        <p class="text-lg mb-6">Reach the highest score you can.</p>
+        <button
+          id="gameStartBtn"
+          class="bg-blue-500 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold text-lg"
+        >
+          Play
+        </button>
+      </div>
+      <div
+        id="gameEndDiv"
+        class="gameUI z-20 p-30 flex flex-col items-center justify-center top-0 left-0 right-0 bottom-0 bg-slate-700 bg-opacity-75 hidden"
+      >
+        <p class="text-3xl font-semibold mb-4">Game Over</p>
+        <h1 class="text-2xl font-bold mb-4">
+          Score: <span id="gameEndScoreSpan"></span>
+        </h1>
+        <p class="text-lg mb-6">Refresh the page to try again</p>
+      </div>
+    </main>
+    <footer class="italic font-semibold mt-8">
+      <a href="https://github.com/gurk7n" class="text-white hover:text-blue-400"
+        >github.com/gurk7n</a
+      >
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
